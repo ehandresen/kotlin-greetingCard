@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
             GreetingCardTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -35,9 +35,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Surface(color = Color.Cyan) {
+    Surface(color = Color.Cyan, modifier = Modifier.fillMaxSize()) {
         Text(
-            text = "Hi, my name is $name!",
+            text = "Hi, my name is$name!",
             modifier = modifier.padding(24.dp)
         )
     }
